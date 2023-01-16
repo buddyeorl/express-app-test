@@ -9,6 +9,9 @@ const app = server();
 //middlewares
 app.use(server.urlencoded());
 app.use(server.json());
+//serve static files
+app.use(server.static('public'));
+
 app.use("/api", api);
 
 const printPort = () => {
